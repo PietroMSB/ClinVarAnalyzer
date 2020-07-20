@@ -40,12 +40,12 @@ https://www.ebi.ac.uk/thornton-srv/databases/cgi-bin/DisaStr/GetPage.pl?varmap=T
 
 # PDB Structure Files
 The PDB structure files associated to the mutations with VarMap are downloaded from the Protein Data Bank [3]:
-https://www.rcsb.org/
+https://www.rcsb.org/.
 The structures are stored in the "Data/PISA/Structures/" sub.directory.
 
 # Interface Files
 During the analysis, interface files are downloaded from the PDBe-PISA (Proteins, Interfaces, Structures and Assemblies) website:
-https://www.ebi.ac.uk/pdbe/pisa/
+https://www.ebi.ac.uk/pdbe/pisa/.
 The interfaces of each PDB structure are listed in a .xml file, which is stored in the "Data/PISA/Interfaces/" sub-directory.
 
 # POPS Output Files
@@ -56,9 +56,9 @@ To analyze a set of ClinVar mutations, once the input has been prepared, simply 
 1) dist_matrix.txt : distance matrix between aminoacids based on the minimum number of single nucleotide mutations needed to transform aminoacid 1 (row) into aminoacid 2 (column).
 2) mutation_map.xlsx : map of the set of ClinVar mutations, based on the distance matrix, in .xlsx format.
 3) mutation_matrix.txt : map of the set of ClinVar mutations in .txt format.
-4) mutation_plot.png : color visualization of the distance matrix, corresponding to the color base of .xlsx map.
+4) mutation_plot.png : color visualization of the distance matrix, corresponding to the color base of the .xlsx map.
 5) report.txt : the output file reporting all the results of the analysis.
-6) VarMapInput.txtx : the list of mutation entries to submit to VarMap, in order to associate PDB structures to the mutations.
+6) VarMapInput.txt : the list of mutation entries to submit to VarMap, in order to associate PDB structures to the mutations.
 On a first run, the analyzer will stop after writing "VarMapInput.txt". To proceed, it is necessary to submit this file to the VarMap web tool. Once the results have been produced, they should be inserted in the "Data/" directory and renamed "VarMap_results.tsv" (the default name can be changed with the parameter "path_varmap_output" in the script). Then, the script should be run again as "python analyze.py".
 When re-analyzing a set of mutations which was already succesfully analyzed, it is possible to speed up the execution by changing the parameter "check_and_download_files" to False. This requires all the structure files, interface files, and POPS output files to be in the respective sub-directories.
 
