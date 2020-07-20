@@ -60,6 +60,7 @@ To analyze a set of ClinVar mutations, once the input has been prepared, simply 
 5) report.txt : the output file reporting all the results of the analysis.
 6) VarMapInput.txt : the list of mutation entries to submit to VarMap, in order to associate PDB structures to the mutations.
 On a first run, the analyzer will stop after writing "VarMapInput.txt". To proceed, it is necessary to submit this file to the VarMap web tool. Once the results have been produced, they should be inserted in the "Data/" directory and renamed "VarMap_results.tsv" (the default name can be changed with the parameter "path_varmap_output" in the script). Then, the script should be run again as "python analyze.py".
+
 When re-analyzing a set of mutations which was already succesfully analyzed, it is possible to speed up the execution by changing the parameter "check_and_download_files" to False. This requires all the structure files, interface files, and POPS output files to be in the respective sub-directories.
 
 # References
